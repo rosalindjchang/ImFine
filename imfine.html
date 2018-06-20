@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="fine.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<meta charset="UTF-8">
+		<title>i'm fine</title>
+    	<script src="models/model_pca_20_svm.js"></script>
+		<script src="js/jquery.js">	</script>
+		<script>
+			
+			$(document).ready(function(){
+				
+				var listen = false;
+				var anaudio = document.getElementById("anaudio");
+				
+				var menu = false;
+				
+				$(".menu-icon").click(function(){
+					$(".menu-icon").toggleClass("active");
+					$(".move").toggleClass("menuopen");
+					$("#menclick").toggleClass("msvg2 msvg1");
+					$(".sidebar").toggleClass("active");
+					if (menu == false) {
+						menu = true;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 90 0");
+						}, 700);
+					} else if (menu == true) {
+						menu = false;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 90");
+						}, 700);
+						
+					}
+				});
+				
+				$(".men").click(function(){
+					$(".col1").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+				});
+				
+				$("#anaudio")[0].volume = 0;
+				
+				if (listen == false) {
+					$("#switch").on('mouseenter', function(){
+						$(".aud").addClass("blink3").remove("blink2");
+					}).on('mouseleave',function(){
+						$(".aud").removeClass("blink3").add("blink2");
+					})
+				}
+				
+				$("#switch").click(function(){
+					if (listen == false){
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,-30 45,-30 45,0");
+						listen = true;
+						$(".aud").removeClass("blink2").addClass("opp");
+						$("#anaudio").get(0).play();
+						$("#anaudio").animate({volume: 1}, 1500);
+						$(".row").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+					} else if (listen == true) {
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,0 45,0 45,0");
+						listen = false;
+						$(".aud").removeClass("opp").addClass("blink2");
+						$("#anaudio").get(0).pause();
+						$("#anaudio").animate({volume: 0}, 2000);
+						document.getElementById("anaudio").loop = true;
+						$(".row").fadeIn().addClass("fadeIn").removeClass("fadeOut");
+					}
+				});				
+				
+				$(".fine").click(function(){
+					$(".e").removeClass("dense");
+					$(".o").removeClass("long");
+					$(".s").removeClass("silence");
+					$(".t").removeClass("twist");
+					$(".l").removeClass("line");
+					$(".b1").removeClass("jitter1 moan1 bold");
+					$(".b2").removeClass("jitter2 moan1 bold");
+					$(".si").addClass("clickable");
+					$(".eh").addClass("clickable");
+					$(".oh").addClass("clickable");
+					$(".tt").addClass("clickable");
+					$(".li").addClass("clickable");
+					$(".j").addClass("bl clickable");
+					$(".m").addClass("moa clickable");
+					$(".th").addClass("thick clickable");
+					$(".alot").addClass("uc clickable");
+					$(".noth").addClass("smul clickable")
+					$(".fine").removeClass("clickable");
+					$(".colf").removeClass("lot smull");
+				});
+				
+				$(".eh").click(function(){
+					$(".fine").addClass("clickable");
+					$(".e").addClass("dense");
+					$(".eh").removeClass("clickable");
+				});
+				
+				$(".oh").click(function(){
+					$(".fine").addClass("clickable");
+					$(".o").addClass("long");
+					$(".oh").removeClass("clickable");
+				});
+				
+				$(".si").click(function(){
+					$(".fine").addClass("clickable");
+					$(".s").addClass("silence");
+					$(".si").removeClass("clickable");
+				});
+				
+				$(".tt").click(function(){
+					$(".fine").addClass("clickable");
+					$(".t").addClass("twist");
+					$(".tt").removeClass("clickable");
+				});
+				
+				$(".li").click(function(){
+					$(".fine").addClass("clickable");
+					$(".l").addClass("line");
+					$(".li").removeClass("clickable");
+				});
+				
+				$(".j").click(function(){
+					$(".fine").addClass("clickable");
+					$(".b1").addClass("jitter1").removeClass("moan1");
+					$(".b2").addClass("jitter2").removeClass("moan1");
+					$(".j").removeClass("bl clickable");
+					$(".m").addClass("moa clickable");
+				});
+				
+				$(".m").click(function(){
+					$(".fine").addClass("clickable");
+					$(".b1").removeClass("jitter1").addClass("moan1");
+					$(".b2").removeClass("jitter2").addClass("moan1");
+					$(".m").removeClass("moa clickable");
+					$(".j").addClass("bl clickable");
+				});
+				
+				$(".th").click(function(){
+					$(".fine").addClass("clickable");
+					$(".b1").addClass("bold");
+					$(".b2").addClass("bold");
+					$(".th").removeClass("thick clickable");
+				});
+				
+				$(".alot").click(function(){
+					$(".fine").addClass("clickable");
+					$(".colf").addClass("lot");
+					$(".alot").removeClass("uc clickable");
+				});
+				
+				$(".noth").click(function(){
+					$(".fine").addClass("clickable");
+					$(".colf").addClass("smull");
+					$(".noth").removeClass("smul clickable");
+				});
+			});
+		</script>	
+	</head>
+	
+	<body>
+		<div class="row animated fadeIn">
+			<div class="colf move">
+				
+				<span class="fine">I’m fine.</span><br><br>
+
+				<span class="t tt clickable">knots</span> run<br>
+				down <span class="t">throat</span> to <span class="e t">chest</span><br>
+				clog <span class="e t">rest-</span><br>
+				<span class="e">less</span> <span class="e">breath</span><br>
+				<span class="e">mess</span> round<br> 
+				<span class="e eh clickable">clenched</span> hands<br>
+				<span class="t">rust</span> <span class="e">neck</span><br>
+				<span class="e">lead</span> <span class="e">texts</span><br>
+				<span class="e eh clickable">dense</span> laughter<br>
+				<span class="e eh clickable">condense</span><br>
+				in my ears<br>
+				and <span class="t tt clickable">twist</span><br><br>
+
+				over the<br>
+				last word you <span class="e s">said</span><br>
+				on <span class="t">tuesday</span> <span class="t">two</span><br>
+				weeks ago<br>
+				and the<br>
+				<span class="s si clickable">silence</span> of your <span class="s">face</span><br>
+				when I <span class="e s">said</span> <span class="s">something</span><br>
+				was <span class="o">wrong</span><br><br>
+			</div>
+			
+			<div class="colf">
+				<span class="o s">sorrow</span><br>
+				<span class="e s">stretched</span> <span class="o oh clickable">long</span><br>
+				because I can’t<br>
+				take the <span class="e">heavy</span> <span class="b1">b</span><span class="b2">l</span><span class="b1">u</span><span class="b2">e</span><br>
+				<span class="o">out</span> of her dark <span class="o">brown</span> eyes<br>
+				fill the cavity in her voice<br>
+				and now I’m <span class="e">drenched</span><br>
+				in <span class="b1">b</span><span class="b2">l</span><span class="b1">u</span><span class="b2">e</span><br><br>
+
+				a <span class="t j bl clickable">jittering</span> <span class="b1">b</span><span class="b2">l</span><span class="b1">u</span><span class="b2">e</span><br>
+				a <span class="m moa clickable">moaning</span> <span class="b1">b</span><span class="b2">l</span><span class="b1">u</span><span class="b2">e</span><br>
+				a <span class="b1">b</span><span class="b2">l</span><span class="b1">u</span><span class="b2">e</span> with <span class="th thick clickable">thick</span><br>
+				grasping fingers<br>
+				but <span class="o">not</span> <span class="th thick clickable">thick</span> enough<br>
+				to pry open<br>
+				the <span class="o l oh clickable">long</span> <span class="l li clickable">line</span><br> 
+				of your <span class="l">lips</span><br><br>
+
+				<i>what’s <span class="o">wrong</span></i><br><br>
+
+				<span class="alot uc clickable">a lot</span><br>
+				I don’t know<br>
+				<span class="noth smul clickable">nothing</span><br><br>
+			</div>
+			
+			<div class="colf">
+				cheeks prickle<br>
+				<span class="fine">I’m numb.</span> 
+			</div>
+		</div>
+
+		<div class="sidebar">
+			<ul class="menu">
+				<li><a href ="index.html" class="men">+</a></li>
+				<li><a href ="american.html" class="men">An American Dream</a></li>
+				<li><a href ="toana.html" class="men">To Ana</a></li>
+				<li><a href ="imfine.html" class="men">I'm Fine</a></li>
+				<li><a href ="waves.html" class="men">Waves</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu-icon">
+			<svg height="60" width="100" id="menclick" class="msvg1">
+				<path id="mi" d="M 50 25 q 0 0 0 90" stroke="white" stroke-width="2" fill="none">				
+				</path>
+			</svg>
+		</div>
+		
+		<svg height="60" width="100" class="aud blink2">
+			<path id="topcurve" d="M 50 50 c 0,0 45,0 45,0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+			<path d="M 50 50 q 15 0 45 0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+		</svg>
+		
+		<div id="switch"></div>
+		<audio class="audio" id="anaudio" controls preload="none"> 
+		   <source src="audio/imfine_audio.mp3" type="audio/mpeg">
+		</audio>
+
+	</body>
+	
+</html>

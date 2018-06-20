@@ -1,0 +1,231 @@
+* {
+	cursor: cell;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-family:Roboto Mono;
+	font-weight: 100;
+	line-height: 30px;
+	font-size: 8pt;
+	color:white;
+	background: #111111;
+}
+
+.menu-icon
+{
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	width: 30px;
+	height 50px;
+	padding: 2px 9px;
+	background: none;
+	box-sizing:border-box;
+}
+
+.menu-icon svg:hover {
+	cursor: pointer;
+}
+
+.menu-icon svg {
+	position: fixed;
+	color:white;
+	opacity: 1;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	left: -300px;
+	width: 300px;
+	height: 100vh;
+	background: #0C0C0C;
+	transition: 0.8s;
+	padding:20px;
+	text-align:left;
+	box-sizing: border-box;
+}
+
+.sidebar.active {
+	left: 0;
+}
+
+.sidebar .menu {
+	margin: 0;
+	padding: 40px 0;
+}
+
+.sidebar .menu li {
+	list-style:none;
+	font-family: Roboto Mono;
+	font-size: 10pt;
+	line-height: 30px;
+	letter-spacing: 4pt;
+	padding-bottom: 40px;
+	padding-left: 20px;
+}
+
+.sidebar .menu li a {
+	display: block;
+	padding 10px 0;
+	color: white;
+	text-decoration: none;
+	font-weight: 300;
+	opacity: 1;
+	transition: 1s;
+}
+
+.sidebar .menu li a:hover {
+	cursor:pointer;
+	letter-spacing: 3pt;
+	opacity: 0.2;
+}
+
+
+
+h1{
+	font-size:14pt;
+	color: white;
+	font-family: Roboto Mono;
+	font-weight: 300;
+	margin: 100;
+	
+}
+
+.row {
+	
+}
+
+.col1 {
+	padding: 100px 5%;
+	float: left;
+	margin: 2%;
+	width: 85%;
+	opacity: 1;
+	transition: 0.8s;
+}
+
+.col2 {
+	padding: 100px 5%;
+	float: left;
+	margin: 2%;
+	width: 36%;
+	opacity: 1;
+	transition: 0.5s;
+}
+
+
+
+.menuopen {
+	margin-left: 300px;
+	transition: 1s;
+}
+
+svg {
+	position:fixed;
+	bottom:15pt;
+	left:-15pt;
+	opacity: 0.04;
+	transition: 1s;
+}
+
+svg:hover {
+	opacity: 0.2;
+}
+
+.msvg1 {
+	top:-2pt;
+	left:-15pt;
+}
+
+.msvg2 {
+	top:-2pt;
+	left:160pt;
+}
+
+.op {
+	opacity: 1;
+	transition: 1s;
+}
+
+.opp {
+	opacity: 1;
+	transition: 5s;
+}
+
+#topcurve {
+	transition: 1s;
+}
+
+#switch {
+	width:29pt;
+	height:20pt;
+	position: fixed;
+	display: absolute;
+	bottom:18pt;
+	left:20pt;
+	background:none;
+	cursor:pointer;
+	transition:2s;
+}
+
+.audio {
+	display: none;
+	transition: 2s;
+}
+
+.listen {
+	opacity: 0;
+	transition:4s ease-in-out;
+}
+
+.blink {
+	animation: blinker 4s linear infinite;
+	transition:2s;
+}
+
+
+.blink2 {
+	animation: blinker 4s linear infinite;
+	transition:2s;
+}
+
+@keyframes blinker {
+	0% {opacity: 0.04;}
+	40% {opacity: 0.3;}
+	100% {opacity: 0.04;}
+}
+
+@keyframes blinker2 {
+	0% {opacity: 0.8;}
+	40% {opacity: 0.5;}
+	100% {opacity: 0.8;}
+}
+
+.blink:hover {
+	opacity: 0.3;
+	cursor: pointer;
+	animation: none;
+	transition: 2s;
+}
+.blink3 {
+	animation: blinker2 4s linear infinite;
+	transition:2s;
+}
+
+.aud {transition:3s;}
+
+@keyframes hovv {
+	0% {opacity: 1;}
+	40% {opacity: 0.4;}
+	100% {opacity: 1;}
+}
+
+#mi { transition:0.7s; }

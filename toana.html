@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="ana.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<meta charset="UTF-8">
+		<title>to ana</title>
+    	<script src="models/model_pca_20_svm.js"></script>
+		<script src="js/jquery.js">	</script>
+		<script>
+
+			$(document).ready(function(){
+				
+				var listen = false;
+				var menu = false;
+				var anaudio = document.getElementById("anaudio");
+					
+				$(".menu-icon").click(function(){
+					$(".menu-icon").toggleClass("active");
+					$(".col1").toggleClass("menuopen");
+					$("#menclick").toggleClass("msvg2 msvg1");
+					$(".sidebar").toggleClass("active");
+					if (menu == false) {
+						menu = true;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 90 0");
+						}, 700);
+					} else if (menu == true) {
+						menu = false;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 90");
+						}, 700);	
+					}
+				});
+				
+				$(".men").click(function(){
+					$(".col1").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+				});
+				
+				$("#anaudio")[0].volume = 0;
+				
+				if (listen == false) {
+					$("#switch").on('mouseenter', function(){
+						$(".aud").addClass("blink3").remove("blink2");
+					}).on('mouseleave',function(){
+						$(".aud").removeClass("blink3").add("blink2");
+					})
+				}
+				
+				$("#switch").click(function(){
+					if (listen == false){
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,-30 45,-30 45,0");
+						listen = true;
+						$(".aud").removeClass("blink2").addClass("opp");
+						$("#anaudio").get(0).play();
+						$("#anaudio").animate({volume: 1}, 1500);
+						$(".col1").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+					} else if (listen == true) {
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,0 45,0 45,0");
+						listen = false;
+						$(".aud").removeClass("opp").addClass("blink2");
+						$("#anaudio").get(0).pause();
+						$("#anaudio").animate({volume: 0}, 2000);
+						document.getElementById("anaudio").loop = true;
+						$(".col1").fadeIn().addClass("fadeIn").removeClass("fadeOut");
+					}
+				});
+				
+				var click2 = false;
+				var click3 = false;
+
+				$(".anap1").click(function(){
+					$("#show2").fadeOut();
+					$("#show3").fadeOut();
+					$("#show4").fadeOut();
+					$(".anap1").removeClass("blink").addClass("anapactive");
+					$("#show1").fadeIn(2000);
+					$(".bodylett").addClass("bloated").removeClass("bloated2 bloated3 bloated4");
+					$("#anap2").bind("click").addClass("blink down").removeClass("anapactive");
+					$("#anap3").addClass("down").removeClass("anapactive");
+					$("#anap4").addClass("down").removeClass("anapactive");
+						if (click2 == true) {
+							$("#anap3").addClass("blink");
+						}
+						if (click3 == true) {
+							$("#anap4").addClass("blink");
+						}
+					$("#anap2").click(function(){
+						$("#show1").fadeOut();
+						$("#show3").fadeOut();
+						$("#show4").fadeOut();
+						$("#anap2").removeClass("blink down").addClass("anapactive");
+						$("#show2").fadeIn(2000);
+						$(".bodylett").removeClass("bloated bloated3 bloated4").addClass("bloated2");
+						$("#anap3").bind("click").addClass("blink");
+						$(".anap1").removeClass("anapactive").addClass("blink");
+						$("#anap3").addClass("down").removeClass("anapactive");
+						$("#anap4").addClass("down").removeClass("anapactive");
+						if (click3 == true) {
+							$("#anap4").addClass("blink");
+						}
+						$("#anap3").click(function(){
+							click2 = true;
+							$("#show1").fadeOut();
+							$("#show2").fadeOut();
+							$("#show4").fadeOut();
+							$("#anap3").removeClass("blink down").addClass("anapactive");
+							$("#show3").fadeIn(2000);
+							$(".bodylett").removeClass("bloated4 bloated2 bloated").addClass("bloated3");
+							$("#anap4").addClass("blink").bind("click");
+							$(".anap1").addClass("blink").removeClass("anapactive down");
+							$("#anap2").removeClass("anapactive down").addClass("blink");
+							$("#anap4").addClass("down").removeClass("anapactive");
+							$("#anap4").click(function(){
+								click3 = true;
+								$("#show2").fadeOut();
+								$("#show3").fadeOut();
+								$("#show1").fadeOut();
+								$("#anap4").addClass("anapactive").removeClass("blink down");
+								$("#show4").fadeIn(2000);
+								$(".bodylett").removeClass("bloated3 bloated2 bloated").addClass("bloated4");
+								$(".anap1").removeClass("anapactive down").addClass("blink");
+								$("#anap2").removeClass("anapactive down").addClass("blink");
+								$("#anap3").addClass("blink").removeClass("anapactive down");
+							});
+						});
+					});
+				});
+			});
+		</script>	
+	</head>
+	
+	<body>
+
+		<div class="row">
+			<div class="col1 animated fadeIn">
+				
+				<div id="anatitle">To Ana</div>
+				<br><br><br>
+				
+				<div class="bodylett" id="b">B</div>
+				<div class="bodylett" id="o">O</div>
+				<div class="bodylett" id="d">D</div>
+				<div class="bodylett" id="y">Y</div>
+				
+				<div class="analine anap1 blink"><i>I had no idea </i></div>
+				<div class="hide" id="show1"><br>they pinched you with fingers and words stretching your body to bloated proportions 
+				<br>layers of heavy cream wrapped round your waist
+				<br>so you hid between the library shelves during lunchtime, picking at an apple 
+				<br>while your body nibbled and bit away at its own soft flesh. </div>
+				<br><br>
+
+				<div class="analine" id="anap2"><i>I couldn't see</i></div>
+				<div class="hide" id ="show2"><br>under your baggy, dark green sweater, skin steadily tightening over sharp bone
+				<br>until your ribs were embossed on pale skin, against a fragile marble of thin veins
+				<br>caged in your own skeleton, you pinched yourself and ran in circles 
+					<br>thinning ankles weighed down.</div>
+				<br><br>
+				
+				<div class="analine" id="anap3"><i>I heard you</i></div>
+				<div class="hide" id="show3"><br>rustling with the stuffing of pork-filled tissues in your pockets during meal-time prayer
+				<br>screaming no one understands, injustice, butter in rice, inside jacket, on your hands
+				<br>dwindling arms banging doors shut, bony feet stomping an earthquake of headaches
+				<br>and when you screamed at me, I barricaded myself behind walls of silence.</div>
+				<br><br>
+				
+				<div class="analine" id="anap4"><i>I saw</i></div>
+				<div class="hide" id="show4"><br>you were trying to peel away layers that didn’t exist, scraping until nothing would be left,
+				<br>but by that time I didn’t know you anymore. </div>
+			
+			</div>
+		</div>
+		
+		<div class="sidebar">
+			<ul class="menu">
+				<li><a href ="index.html" class="men">+</a></li>
+				<li><a href ="american.html" class="men">An American Dream</a></li>
+				<li><a href ="toana.html" class="men">To Ana</a></li>
+				<li><a href ="imfine.html" class="men">I'm Fine</a></li>
+				<li><a href ="waves.html" class="men">Waves</a></li>
+			</ul>
+		</div>
+		
+		<div class="menu-icon">
+			<svg height="60" width="100" id="menclick" class="msvg1">
+				<path id="mi" d="M 50 25 q 0 0 0 90" stroke="white" stroke-width="2" fill="none">				
+				</path>
+			</svg>
+		</div>
+		
+		<svg height="60" width="100" class="aud blink2">
+			<path id="topcurve" d="M 50 50 c 0,0 45,0 45,0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+			<path d="M 50 50 q 15 0 45 0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+		</svg>
+		
+		<div id="switch"></div>
+		<audio class="audio" id="anaudio" controls preload="none"> 
+		   <source src="audio/toana_audio.mp3" type="audio/mpeg">
+		</audio>
+	</body>
+	
+</html>

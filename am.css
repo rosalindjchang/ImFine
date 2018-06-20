@@ -1,0 +1,1356 @@
+.section.menuopen {
+	margin-left: 300px;
+	transition:1s;
+}
+
+.section {
+	opacity:1;
+	transform: translate(0, 100px); 
+  	transition: all 1s;
+	margin-left:0px;
+	cursor:cell;
+}
+
+.slide {
+	position:relative;
+	animation: slideshow 6s linear infinite;
+	
+}
+
+@keyframes slideshow {
+	0% {left:-4vw;}
+	100% {left:-100%}
+}
+
+
+.amtitle {
+		font-size: 16vw;
+		line-height: 33vh;
+		font-weight: 400;
+		display: inline-block;
+		margin-left:10%;
+}	
+	
+	#an {
+		margin-top: 120px;
+		color: red;
+		margin-top:0;
+	}
+	
+	.colam {
+		position:fixed;
+		bottom:5%;
+		right:5vw;
+		text-align: left;
+		opacity: 1;
+		transition:1s;
+		display: inline-block;
+		float:right;
+		width:350px;
+	}
+	
+	.aa{
+			font-size: 10vw;
+			font-weight: 400;
+			display: inline-block;
+			margin-left:-40px;
+			letter-spacing: 1vw;
+			position: fixed;
+			display:inline-flex;
+			top: 20vw;
+			left: -4vw;
+			opacity: 0;
+			transition: 2s;
+	}
+	
+	.aaa {
+			font-size: 27vw;
+			font-weight: 400;
+			display: inline-block;
+			margin-left:-40px;
+			letter-spacing: 0.1vw;
+			position: fixed;
+			display:inline-flex;
+			top: 20vw;
+			left: -4vw;
+			opacity: 1;
+			transition: 1s;
+		}
+	
+	
+
+	.uaa {
+		position:absolute;
+		transform:rotate(180deg) translate(25.5vw,-0.5vw);
+		transition: 2s;
+	}
+
+	.uaaa {
+		position:absolute;
+		transform:rotate(180deg) translate(8vw,-1.8vw);
+		transition: 1s;
+	}
+	
+.M {
+		position: fixed;
+		font-weight: 100;
+}
+
+
+
+.A {
+		position: fixed;
+}
+
+.mm {
+	font-size: 6vw;
+	opacity: 0;
+	transition: 2S;
+	bottom:0vw;
+	left: 23vw;
+	font-weight:400;
+}
+
+.mmm {
+	font-size: 35vw;
+	opacity: 1;
+	transform: scaleX(2);
+	transition: 1.2s;
+	bottom:6vw;
+	left: 16vw;
+	font-weight:100;
+}
+
+.ma {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	transition: 1s;
+	bottom:40vw;
+	left: 23VW;
+	color:#111111;
+	transition: 2s;
+}
+	
+.maa {
+	transform: scaleX(2);
+	font-size:35vw;
+	opacity: 1;
+	color:red;
+	bottom:30.9vw;
+	left: 16vw;
+	transition: 1s;
+	font-weight:100;
+}
+
+.I {
+		font-weight:400;
+		position:fixed;
+}
+
+.ii {
+	font-size: 5vw;
+	color:#111111;
+	opacity: 0;
+	left:20vw;
+	bottom:50%;
+	transition:2s;
+}
+
+.iii {
+	transform: rotate(90deg) scaleY(1.5);
+	font-size: 24vw;
+	color:blue;
+	opacity: 1;
+	left:30vw;
+	bottom:15%;
+	transition:1s;
+}
+	
+
+#mattress {
+	transition:1s;
+}
+
+#mattress:hover {
+	transition:1s;
+	color:blue;
+}
+
+.white {
+	color: white;
+	float: left;
+}
+
+.blue {
+	color:blue;
+	float:left;
+}
+
+.red {
+	color:red;
+	float:left;
+}
+
+#assemblage {
+	transition: 0.5s ease-in-out;
+}
+
+#assemblage:hover {
+	transition:1s ease-in-out;
+	color:red;
+}
+
+#house {
+	transition: 0.5s ease-in-out;
+}
+
+#house:hover {
+	transition:1s ease-in-out;
+	color:red;
+}
+
+.buoy {
+	transition: 1s;
+}
+
+.buoy:hover {
+	color:blue;
+	transition: 1s;
+}
+
+
+.D {
+	font-weight: 100;
+	position: fixed;
+	top:40%;
+}
+
+.D2 {
+	font-weight: 100;
+	position: fixed;
+	top:20%;
+}
+
+.D3 {
+	position: fixed;
+	top:30%;
+}
+
+.dd {
+	font-weight: 400;
+	opacity: 0;
+	transition:2s;
+	font-size:5vw;
+	color:#111111;
+	left:5vw;
+}
+
+.ddd {
+	font-weight: 100;
+	opacity: 1;
+	transition:1s;
+	font-size: 24vw;
+	left:20vw;
+	color:blue;
+}
+
+.swayy {
+	animation: sway 6s linear infinite;
+	animation-direction: alternate;
+}
+
+
+@keyframes sway {
+	0% {transform: rotate(-90deg) translate(-5vh,-10vw) scale(2.2);}
+	6.7% {transform: rotate(-100deg) translate(3vh,-5vw) scale(1.9);}
+	15% {transform: rotate(-90deg) translate(0vh,0vw) scale(1.6);}
+	21.3% {transform: rotate(-80deg) translate(-4vh,5vw) scale(1.5);}
+	25% {transform: rotate(-90deg) translate(-10vh,10vw) scale(1.4);}
+	32% {transform: rotate(-100deg) translate(-3vh,15vw) scale(1.3);}
+	41% {transform: rotate(-90deg) translate(0vh,20vw) scale(1.2);}
+	46.3% {transform: rotate(-80deg) translate(-4vh,25vw) scale(1.1);}
+	50% {transform: rotate(-90deg) translate(-6vh,30vw) scale(1);}	
+	59.7% {transform: rotate(-105deg) translate(-10vh,35vw) scale(0.9);}
+	65% {transform: rotate(-90deg) translate(10vh,40vw) scale(0.8);}
+	71.3% {transform: rotate(-70deg) translate(30vh,45vw) scale(0.7);}
+	78% {transform: rotate(-90deg) translate(-6vh,60vw) scale(0.6);}
+	90% {transform: rotate(-100deg) translate(-3vh,70vw) scale(0.5);}
+	98% {transform: rotate(-90deg) translate(-4vh,72vw) scale(0.4);}
+	100% {transform: rotate(-90deg) translate(-5vh,75vw) scale(0.3);}
+}
+
+#crunch {
+	transition: 1s;
+}
+
+#crunch:hover {
+	transition: 1s; 
+	color:red;
+}
+
+.C {
+	position:fixed;
+}
+
+.C2 {
+	position:fixed;
+	margin-left: 3vw;
+	margin-top: -3vw;
+}
+
+.C3 {
+	position:fixed;
+	margin-left: 6vw;
+	margin-top: -6vw;
+}
+
+.cc {
+	opacity: 0;
+	transition:2s;
+	font-size:5vw;
+	color:#111111;
+	left:5vw;
+	top:100%;
+	font-weight: 400;
+}
+
+.ccc {
+	opacity: 1;
+	transition:1s;
+	font-size: 40vw;
+	left:7vw;
+	color:red;
+	top:70%;
+	font-weight: 100;
+}
+
+
+.Canimate {
+	animation: canim 1.4s linear infinite;
+}
+
+@keyframes canim {
+	0% {transform: translate(0,0); opacity: 0;}
+	5% {opacity: 0;}
+	40% {opacity: 0.8;}
+	50% {opacity: 0.8;}
+	80% {opacity: 0;}
+	100% {transform: translate(+600px,-600px); opacity: 0;}
+}
+
+.Canimate2 {
+	animation: canim2 1.4s linear infinite;
+}
+
+@keyframes canim2 {
+	0% {transform: translate(0,0); opacity: 0;}
+	10% {opacity: 1;}
+	20% {opacity: 1;}
+	60% {opacity: 0.9;}
+	90% {opacity: 0;}
+	100% {transform: translate(+600px,-600px); opacity: 0;}
+}
+
+.Canimate3 {
+	animation: canim3 1.4s linear infinite;
+}
+
+@keyframes canim3 {
+	0% {transform: translate(0,0); opacity: 1;}
+	80% {opacity: 1;}
+	90% {opacity: 1;}
+	100% {transform: translate(+600px,-600px); opacity: 0;}
+}
+
+#hoisted {
+	transition: 1s;
+}
+
+#hoisted:hover {
+	transition: 1s;
+	color:blue;
+}
+
+#tender {
+	transition: 1s;
+}
+
+#tender:hover {
+	transition: 1s;
+	color:red;
+}
+
+.H {
+	position:fixed;
+}
+
+.H2 {
+	position:fixed;
+	margin-bottom: 38vw;
+}
+
+.H3 {
+	position:fixed;
+	margin-bottom: 20vw;
+}
+
+.hh {
+	font-weight: 400;
+	font-size: 6vw;
+	left:32vw;
+	bottom:0;
+	transition:2s;
+	opacity: 0;
+	color:#111111;
+}
+
+.hhh3 {
+	font-size: 30vw;
+	transform: scaleX(2);
+	left:24vw;
+	bottom:5vw;
+	opacity: 1;
+	font-weight:600;
+	transition:1s;
+	color: blue;
+}
+
+.hhh {
+	font-size: 30vw;
+	transform: scaleX(2);
+	left:24vw;
+	bottom:5vw;
+	opacity: 1;
+	font-weight:600;
+	transition:1s;
+	color: red;
+}
+
+.hhh2 {
+	font-size: 30vw;
+	transform: scaleX(2);
+	left:24vw;
+	bottom:5vw;
+	opacity: 1;
+	font-weight:600;
+	transition:1s;
+	color: white;
+}
+
+.stacking {
+	animation: stack 3s linear 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes stack {
+	0% {transform: translate(0,-30vw) scaleX(2);}
+	20% {transform: translate(0,18.6vw) scaleX(2);}
+	40% {transform: translate(0,18.6vw) scaleX(2);}
+	60% {transform: translate(0,1.6vw) scaleX(2);}
+	80% {transform: translate(0,1.6vw) scaleX(2);}
+	100% {transform: translate(0,-20.4vw) scaleX(2);}
+}
+
+.stacking2 {
+	animation: stack2 3s linear 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes stack2 {
+	0% {transform: translate(0,58vw) scaleX(2);}
+	40% {transform: translate(0,58vw) scaleX(2);}
+	60% {transform: translate(0,41vw) scaleX(2);}
+	80% {transform: translate(0,41vw) scaleX(2);}
+	100% {transform: translate(0,19vw) scaleX(2);}
+}
+
+.stacking3 {
+	animation: stack3 3s linear 1;
+	animation-fill-mode: forwards;
+}
+
+@keyframes stack3 {
+	0% {transform: translate(0,25vw) scaleX(2);}
+	80% {transform: translate(0,25vw) scaleX(2);}
+	100% {transform: translate(0, 2.3vw) scaleX(2);}
+}
+
+.E {
+	position: fixed;
+}
+.E2 {
+	position: fixed;
+}
+
+.ee {
+	font-weight: 400;
+	font-size: 6vw;
+	left:32vw;
+	bottom:-5vw;
+	transition:2s;
+	opacity: 0;
+	color:white;
+}
+
+.eee {
+	font-weight: 100;
+	transform: rotate(-90deg) scaleX(0.8);
+	font-size: 10vw;
+	left:24vw;
+	bottom:14vw;
+	transition:1s;
+	opacity: 1;
+}
+
+.ee2 {
+	font-weight: 400;
+	font-size: 6vw;
+	left:32vw;
+	bottom:43vw;
+	transition:2s;
+	opacity: 0;
+	color:#111111;
+}
+
+.eee2 {
+	font-weight: 400;
+	transform: rotate(90deg) scaleX(0.8);
+	font-size: 50vw;
+	left:22vw;
+	bottom:30vw;
+	transition:1.5s;
+	opacity: 1;
+	color:red;
+}
+
+#restless {
+	transition: 1s;
+}
+
+#restless:hover {
+	transition: 1s;
+	color:blue;
+}
+
+.Rest {
+	position: fixed;
+	font-weight: 100;
+}
+
+.re {
+	font-size: 4vw;
+	left:32vw;
+	bottom:-5vw;
+	transition:2s;
+	opacity: 0;
+	color:#111111;
+}
+
+.ree {
+	font-size: 40vw;
+	transform: rotate(90deg);
+	left:24vw;
+	bottom:0vw;
+	opacity: 1;
+	transition:1s;
+	color: blue;
+}
+
+.RR {
+	position: fixed;
+	font-weight: 400;
+}
+
+.EE {
+	position: fixed;
+	font-weight: 400;
+}
+
+.AA {
+	position: fixed;
+	font-weight: 400;
+}
+
+.MM {
+	position: fixed;
+	font-weight: 400;
+}
+
+.rr {
+	font-size: 4vw;
+	left:37vw;
+	bottom:1vw;
+	transition:2s;
+	opacity: 0;
+	color:white;
+}
+
+.rrr {
+	font-size: 20vw;
+	left:37.5vw;
+	bottom:16.3vw;
+	opacity: 1;
+	transition:1s;
+}
+
+.er {
+	font-size: 4vw;
+	left:32vw;
+	bottom:0;
+	transition:2s;
+	opacity: 0;
+	color:white;
+}
+
+.err {
+	font-size: 28vw;
+	left:22vw;
+	bottom:19.4vw;
+	opacity: 1;
+	transition:1s;
+}
+
+.ar {
+	font-size: 4vw;
+	left:32vw;
+	bottom:10vw;
+	transition:2s;
+	opacity: 0;
+	color:#111111;
+}
+
+.arr {
+	font-size: 13.3vw;
+	left:26.5vw;
+	bottom:43vw;
+	opacity: 1;
+	transition:1s;
+	color: red;
+}
+
+.mr {
+	font-size: 4vw;
+	left:32vw;
+	bottom:5vw;
+	transition:2s;
+	opacity: 0;
+	color:white;
+}
+
+
+.mrr {
+	font-size: 15vw;
+	left:26vw;
+	bottom:33.4vw;
+	opacity: 1;
+	transition:1s;
+}
+	
+.swingi {
+	animation: swingg 1.7s alternate infinite;
+	position:absolute;
+}
+
+@keyframes swingg {
+	0% {transform: translate(-67vw,22vw) rotate(-35deg);}
+	100% {transform: translate(-67vw,-6vw) rotate(15deg);}
+}
+
+#sub {
+	transition:1s;
+}
+
+#sub:hover {
+	transition:1s;
+	color:blue;
+}
+
+.mm2 {
+	font-size: 6vw;
+	opacity: 0;
+	transition: 2S;
+	bottom:0vw;
+	left: 23vw;
+	font-weight:400;
+	color:#111111;
+}
+
+.mmm2 {
+	font-size: 25vw;
+	opacity: 1;
+	transform: scaleX(2);
+	transition: 1s;
+	bottom:0;
+	left: 16vw;
+	font-weight:100;
+	color:blue;
+}
+
+.mm3 {
+	font-size: 6vw;
+	opacity: 0;
+	transition: 2S;
+	bottom:10vw;
+	left: 23vw;
+	font-weight:400;
+}
+
+.mmm3 {
+	font-size: 22vw;
+	opacity: 1;
+	transform: scaleX(2);
+	transition: 1s;
+	bottom:16.5vw;
+	left: 16.9vw;
+	font-weight:100;
+}
+
+.M2 {
+		position: fixed;
+		font-weight: 100;
+}
+
+.M3 {
+		position: fixed;
+		font-weight: 100;
+}
+
+.A3 {
+		position: fixed;
+}
+
+.ma2 {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	transition: 1s;
+	bottom:40vw;
+	left: 23VW;
+	color:#111111;
+	transition: 2s;
+}
+	
+.maa2 {
+	transform: scaleX(2);
+	font-size:27vw;
+	opacity: 1;
+	color:blue;
+	bottom:32.6vw;
+	left: 15.4vw;
+	transition: 1s;
+	font-weight:100;
+}
+
+#pool {
+	transition: 1s;
+}
+
+#pool:hover {
+	transition: 1s;
+	color: blue;
+}
+
+#promise {
+	transition: 1s;
+}
+
+#promise:hover {
+	transition: 1s;
+	color: red;
+}
+
+.P {
+	position:fixed;
+}
+
+.P2 {
+	position:fixed;
+	margin-left: -3vw;
+	margin-top: -3vw;
+}
+
+.P3 {
+	position:fixed;
+	margin-left: -6vw;
+	margin-top: -6vw;
+}
+
+.pp {
+	opacity: 0;
+	transition:2s;
+	font-size:5vw;
+	color:#111111;
+	left:54vw;
+	top:100%;
+}
+
+.ppp {
+	opacity: 1;
+	transition:1s;
+	font-size: 40vw;
+	left:40vw;
+	color:blue;
+	top:100%;
+	font-weight: 100;
+}
+
+
+.Panimate {
+	animation: panim 4s linear infinite;
+}
+
+@keyframes panim {
+	0% {transform: translate(0,0) scale(0.3) rotate(45deg); opacity: 0;}
+	5% {opacity: 0;}
+	40% {transform: translate(-170px, -200px) scale(1) rotate(45deg); opacity: 1;}
+	90% {opacity: 1;}
+	100% {transform: translate(-500px, -450px) scale(0.3) rotate(45deg); opacity: 0;}
+}
+
+.Panimate2 {
+	animation: panim2 4s linear infinite;
+}
+
+@keyframes panim2 {
+	0% {transform: translate(0,0) scale(0.3) rotate(45deg); opacity: 0;}
+	10% {opacity: 1;}
+	30% {transform: translate(-220px, -270px) scale(1) rotate(45deg); opacity: 1;}
+	60% {opacity: 1;}
+	90% {transform: translate(-470px, -450px) scale(0.3) rotate(45deg); opacity: 0;}
+	100% {transform: translate(-800px,-800px) rotate(45deg); opacity: 0;}
+}
+
+.Panimate3 {
+	animation: panim3 4s linear infinite;
+	transition: 1s;
+}
+
+@keyframes panim3 {
+	0% {transform: translate(0,0) scale(0.3) rotate(45deg); opacity: 1;}
+	20% {transform: translate(-240px, -250px) scale(1) rotate(45deg); opacity: 1}
+	80% {transform: translate(-450px, -450px) scale(0.3) rotate(45deg); opacity: 0;}
+	100% {transform: translate(-750px,-900px) rotate(45deg); opacity: 0;}
+}
+
+.RIM {
+	position: fixed;
+	font-weight: 400;
+}
+
+.rm {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	bottom:-10vw;
+	left: 13VW;
+	color:#111111;
+	transition: 2.1s ease-out ;
+}
+
+.rm2 {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	bottom:-7.5vw;
+	left: 16VW;
+	color:#111111;
+	transition: 1.9s ease-out;
+}
+
+.rm3 {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	bottom:-5vw;
+	left: 20VW;
+	color:#111111;
+	transition: 1.7s ease-out;
+}
+
+
+.rmm {
+	font-weight:400;
+	font-size: 14vw;
+	opacity: 1;
+	bottom:-1vw;
+	left: 9vw;
+	color:red;
+	transition: 1.1s ease-out;
+}
+
+.rmm2 {
+	font-weight:400;
+	font-size: 30vw;
+	opacity: 1;
+	bottom:19.7vw;
+	left: 20VW;
+	color:blue;
+	transition: 0.9s ease-out;
+}
+
+.rmm3 {
+	font-weight:400;
+	font-size: 10vw;
+	opacity: 1;
+	bottom:32.6vw;
+	left: 50VW;
+	color:red;
+	transition: 0.7s ease-out;
+}
+
+.mirr {
+	font-weight:400;
+	font-size: 13vw;
+	opacity: 1;
+	bottom:2vw;
+	left: 17VW;
+	transition: 1s ease-out;
+}
+
+.mirr2 {
+	font-weight:400;
+	font-size: 23vw;
+	opacity: 1;
+	bottom:25vw;
+	left: 37VW;
+	transition: 0.8s ease-out;
+}
+
+
+.mirr3 {
+	font-weight:400;
+	font-size: 10vw;
+	opacity: 1;
+	bottom:36vw;
+	left: 56VW;
+	transition: 0.6s ease-out;
+}
+
+.mir {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	transition: 1s;
+	bottom:-3vw;
+	left: 10VW;
+	color:white;
+	transition: 2s ease-out;
+}
+
+
+.mir2 {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	transition: 1s;
+	bottom:-0.5vw;
+	left: 16VW;
+	color:white;
+	transition: 1.8s ease-out;
+}
+
+.mir3 {
+	font-weight:400;
+	font-size: 6vw;
+	opacity: 0;
+	transition: 1s;
+	bottom:2vw;
+	left: 22VW;
+	color:white;
+	transition: 1.6s ease-out;
+}
+
+#cul {
+	transition: 1s;
+}
+
+#cul:hover {
+	transition: 1s;
+	color:blue;
+}
+
+.Cu {
+	position: fixed;
+	font-weight: 400;
+	transition: 1s;
+}
+
+.co {
+	font-size:6vw;
+	color:white;
+	opacity:0;
+	bottom:0vw;
+	left: 30vw;
+}
+
+.coo {
+	font-weight:400;
+	font-size: 15vw;
+	opacity: 1;
+	transition: 1s;
+	bottom:0vw;
+	left: 30vw;
+	color:blue;
+	transition: 1s ease-out;
+}
+
+.animc {
+	animation: orbit 5s linear infinite;
+}
+
+.animc2 {
+	animation: orbit 5s linear infinite;
+	animation-delay: 0.6s;
+}
+
+.animc3 {
+	animation: orbit 5s linear infinite;
+	animation-delay: -0.6s;
+}
+
+.animc4 {
+	animation: orbit 5s linear infinite;
+	animation-delay: -1.2s;
+}
+
+.animc5 {
+	animation: orbit 5s linear infinite;
+	animation-delay: 1.2s;
+}
+
+.animc6 {
+	animation: orbit 5s linear infinite;
+	animation-delay: -1.8s;
+}
+
+.animc7{
+	animation: orbit 5s linear infinite;
+	animation-delay: -2.4s;
+}
+
+.animc8{
+	animation: orbit 5s linear infinite;
+	animation-delay: -3.2s;
+}
+
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(25vw) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(25vw) rotate(-360deg); }
+}
+
+#opera {
+	transition: 1s;
+}
+
+#opera:hover {
+	transition: 1s;
+	color:red;
+}
+
+.Op {
+	position: fixed;
+	transition:1s;
+}
+
+
+.Op2 {
+	position: fixed;
+	transition:1s;
+}
+
+.aoo2 {
+	font-weight:400;
+	font-size: 24vw;
+	opacity: 1;
+	transition: 1s;
+	top:5vw;
+	left: 35vw;
+	color:red;
+	transition: 1s ease-out;
+}
+
+.aoo {
+	font-weight:400;
+	font-size: 24vw;
+	opacity: 1;
+	transition: 1s;
+	top:5vw;
+	left: 10vw;
+	color:red;
+	transition: 1s ease-out;
+}
+
+.ao {
+	font-weight:400;
+	font-size: 6vw;
+	transition: 1s;
+	top:5vw;
+	left: 15vw;
+	color:#111111;
+}
+
+.ao2 {
+	font-weight:400;
+	font-size: 6vw;
+	transition: 1s;
+	top:5vw;
+	left: 40vw;
+	color:#111111;
+}
+
+.drowning {
+	animation: drown 3.5s ease-in infinite;
+}
+
+.drowning1 {
+	animation: drown 3.5s ease-in infinite;
+	animation-delay: 0.6s;
+}
+
+.drowning2 {
+	animation: drown 3.5s ease-in infinite;
+	animation-delay: 1.2s;
+}
+
+.drowning3 {
+	animation: drown 3.5s ease-in infinite;
+	animation-delay: 1.8s;
+}
+
+.drowning4 {
+	animation: drown 3.5s ease-in infinite;
+	animation-delay: 2.4s;
+}
+
+@keyframes drown {
+	0% {transform: translate(0,0) scale(0.1); opacity:0;}
+	50% {opacity: 1;}
+	100% {transform: translate(0,80vw) scale(1.3); opacity: 0.2;}
+}
+
+#strain {
+	transition: 1s;
+}
+
+#strain:hover {
+	transition: 1s;
+	color:red;
+}
+
+.AI {
+	position: fixed;
+	transition: 1s;
+	font-weight: 100;
+}
+
+.ai {
+	font-size: 6vw;
+	color:white;
+	opacity: 0;
+	left:13vw;
+	bottom:12vw;
+	animation: stretch 2s alternate infinite;
+}
+
+.aii {
+	font-size: 18vw;
+	opacity: 1;
+	left:30vw;
+	bottom:15.7vw;
+	animation: stretch 2s alternate infinite;
+}
+
+@keyframes stretch {
+	0% {transform: translate(-10vw,0);}
+	100% {transform: translate(11.5vw,0);}
+}
+
+
+.IA {
+	position: fixed;
+	transition: 1s;
+	font-weight: 100;
+}
+
+.ia {
+	font-size: 6vw;
+	color:#111111;
+	opacity: 0;
+	left:14vw;
+	bottom:15%;
+	animation: widen 2s alternate infinite;
+}
+
+.iaa {
+	font-size: 30vw;
+	color:red;
+	opacity: 1;
+	left:14vw;
+	bottom:15%;
+	animation: widen 2s alternate infinite;
+}
+
+@keyframes widen {
+	0% {transform: translate(0,0) rotate(90deg) scaleY(1);}
+	100% {transform: translate(12vw,0) rotate(90deg) scaleY(2);}
+}
+
+#pud {
+	transition: 1s;
+}
+
+#pud:hover {
+	color:blue;
+	transition: 1s;
+}
+
+#warm {
+	transition: 1s;
+}
+
+#warm:hover {
+	color:red;
+	transition: 1s;
+}
+
+.W {
+	position:fixed;
+	font-weight: 100;
+}
+.W2 {
+	position:fixed;
+	font-weight: 100;
+	margin-bottom: -0.3vw;
+	margin-left:20vw;
+}
+
+.www {
+	font-size: 27vw;
+	opacity: 1;
+	left:15vw;
+	bottom:22%;
+	transition:1s;
+}
+
+.ww {
+	font-size: 6vw;
+	opacity: 0;
+	left:22vw;
+	bottom:9%;
+	transition:1s;
+}
+
+.upw1 {
+	color:red;
+	animation: upw 2s alternate infinite;
+}
+
+.upw2 {
+	color:white;
+	animation: upw2 2s alternate infinite;
+}
+
+@keyframes upw2 {
+	0% {transform: rotate(-90deg) translate(-2.5vw,0)scaleX(1);}
+	100% {transform: rotate(-90deg) translate(0vw,0) scaleX(1.4);}
+}
+
+@keyframes upw {
+	0% {transform: rotate(90deg) translate(0,0)scaleX(1.4);}
+	100% {transform: rotate(90deg) translate(2.5vw,0) scaleX(1);}
+}
+
+.Pu {
+	position: fixed;
+}
+
+.Pu2 {
+	position: fixed;
+	margin-left: 1vw;
+}
+
+.du {
+	color:#111111;
+	opacity: 1;
+	left:10vw;
+	bottom:-20%;
+	transition:1s;
+}
+
+.duu {
+	font-size: 24vw;
+	color:blue;
+	opacity: 1;
+	left:10vw;
+	bottom:15%;
+	transition:1s;
+}
+
+.raining2 {
+	animation: rain 3s linear infinite;
+	animation-delay: 2.5s;
+}
+
+.raining {
+	animation: rain 3s linear infinite;
+}
+
+@keyframes rain {
+	0% {transform: rotate(-90deg) scale(1,1) translate(55vw,20vw); opacity:1; font-size:6vw;}
+	40% {transform: rotate(-90deg) scale(1,1) translate(5vw,20vw); opacity:1; font-size:6vw;}
+	100% {transform: rotate(-90deg) scale(1,1.5) translate(0vw,0); opacity:0; font-size:50vw;}
+}
+
+#mems {
+	transition: 1s;
+}
+
+#mems:hover {
+	color:blue;
+	transition: 1s;
+}
+
+.Me {
+	position: fixed;
+	font-weight: 100;
+	transition:1s;
+}
+
+
+
+.Me2 {
+	position:fixed;
+	font-weight: 100;
+	margin-left:33vw;
+	transition:1s;
+}
+
+.mee {
+	font-size: 6vw;
+	opacity: 0;
+	left:15vw;
+	bottom:40%;
+	color:#111111;
+	transform: scaleY(1.3);
+}
+
+.meee {
+	font-size: 60vw;
+	opacity: 1;
+	left:0vw;
+	bottom:9vw;
+	color:blue;
+	transform: scaleY(0.3);
+}
+
+.hov {
+	animation: hovv 4s linear infinite;
+	transition:2s;
+}
+
+@keyframes hovv {
+	0% {opacity: 1;}
+	40% {opacity: 0.4;}
+	100% {opacity: 1;}
+}

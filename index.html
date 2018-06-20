@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="hme.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<meta charset="UTF-8">
+		<title>+</title>
+		<script src="js/jquery.js">	</script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				
+				var listen = false;
+				$("#anaudio")[0].volume = 0;
+				$(".ptitles").fadeIn();
+				if (listen == false) {
+					$("#switchs").on('mouseenter', function(){
+						$(".aud").addClass("blink3").remove("blink2");
+					}).on('mouseleave',function(){
+						$(".aud").removeClass("blink3").add("blink2");
+					})
+				}
+				
+				$("#switchs").click(function(){
+					if (listen == false){
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,-30 45,-30 45,0");
+						listen = true;
+						$(".aud").removeClass("blink2").addClass("opp");
+						$("#anaudio").get(0).play();
+						$("#anaudio").animate({volume: 1}, 1500);
+						$(".ptitles").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+					} else if (listen == true) {
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,0 45,0 45,0");
+						listen = false;
+						$(".aud").removeClass("opp").addClass("blink2");
+						$("#anaudio").get(0).pause();
+						$("#anaudio").animate({volume: 0}, 2000);
+						document.getElementById("anaudio").loop = true;
+						$(".ptitles").fadeIn().addClass("fadeIn").removeClass("fadeOut");
+					}
+				});								
+			});
+					
+		</script>		
+	</head>
+	
+	<body>
+				
+		<div class="ptitles animated fadeIn">
+			<li><a href ="american.html" id="pamerican" class="blinka">An American Dream</a></li>
+			<li><a href ="toana.html" id="pana" class="blinkt">To Ana</a></li>
+			<li><a href ="imfine.html" id="pfine" class="blinkf">I'm Fine</a></li>
+			<li><a href ="waves.html" id="pmisc" class="blinkl">Waves</a></li>
+		</div>
+		
+		<svg height="60" width="100" class="aud blink2" id="homeb">
+			<path id="topcurve" d="M 50 50 c 0,0 45,0 45,0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+			<path d="M 50 50 q 15 0 45 0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+		</svg>
+		
+		<div id="switchs"></div>
+		<audio class="audio" id="anaudio" controls preload="none"> 
+		   <source src="audio/home_audio.mp3" type="audio/mpeg">
+		</audio>
+	</body>
+	
+</html>

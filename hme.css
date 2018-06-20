@@ -1,0 +1,174 @@
+
+#homeb {
+	left:50%;
+	transform: translate(-72%, 0);
+	bottom: 48pt
+}
+
+#switchs {
+	width:32pt;
+	height:24pt;
+	position: fixed;
+	bottom:50pt;
+	left:50%;
+	transform: translate(-50%, 0);
+	background:none;
+	cursor:pointer;
+	transition:2s;
+}
+
+.ptitles {
+	transition: 2s;
+	letter-spacing: 2pt;
+}
+
+.ptitles li {
+	list-style:none;
+}
+
+.ptitles li a {
+	color:white;
+	text-decoration: none;
+}
+
+.blinka {
+	animation: blinkee 7s linear infinite;
+	transition:2s;
+	animation-delay: -1.2s;
+}
+
+.blinkt {
+	animation: blinkee 7s linear infinite;
+	transition:2s;
+	animation-delay: -0.4s;
+}
+
+
+.blinkf {
+	animation: blinkee 7s alternate infinite;
+	transition:2s;
+	animation-delay: -3s;
+}
+
+.blinkl {
+	animation: blinkee 7s alternate infinite;
+	transition:2s;
+	animation-delay: -1.8s;
+	
+}
+
+.blinkp {
+	animation: blinkee 7s alternate infinite;
+	transition:2s;
+	animation-delay: -2s;
+	
+}
+
+@keyframes blinkee {
+	0% {opacity: 0.02;}
+	45% {opacity: 0.3;}
+	550% {opacity: 0.3;}
+	100% {opacity: 0.02;}
+}
+
+@keyframes blinke {
+	0% {opacity: 0.8;}
+	30% {opacity: 1;}
+	70% {opacity: 1;}
+	100% {opacity: 0.8;}
+}
+
+#pamerican {
+	font-size: 11pt;
+	transition: 2.5s;
+	text-align: center;
+	position: fixed;
+	top:37vh;
+	left:50%;
+	transform: translate(-50%, 0);
+	line-height: 37pt;
+	font-weight: 300;
+	color:white;
+}
+
+#pamerican:hover {
+	font-weight: 400;
+	font-size: 12pt;
+	transition: 1s;
+	animation: blinke 7s linear infinite;
+	color:blue;
+	cursor:pointer;
+}
+
+
+#pana {
+	font-size: 11pt;
+	transition: 1s;
+	text-align: center;
+	position: fixed;
+	left:50%;
+	transform: translate(-50%, 0);
+	top:43vh;
+	line-height: 37pt;
+}
+
+#pana:hover {
+	transition: 1s;
+	transform: scaleX(0.8) translate(-64%, 0);
+	animation: blinke 7s linear infinite;
+	cursor:pointer;
+}
+
+#pfine {
+	font-size: 11pt;
+	transition: 1s;
+	text-align: center;
+	position: fixed;
+	left:50%;
+	transform: translate(-50%, 0);
+	top:49vh;
+	line-height: 37pt;
+}
+
+#pfine:hover {
+	transition: 2s;
+	animation: blinke 7s linear infinite;
+	cursor:pointer;
+	text-transform:uppercase;
+}
+
+#pmisc {
+	font-size: 11pt;
+	transition: 1s;
+	text-align: center;
+	position: fixed;
+	left:50%;
+	transform: translate(-50%, 0);
+	top:56vh;
+	line-height: 37pt;
+}
+
+#pmisc:hover {
+	transition: 2s;
+	letter-spacing: 10pt;
+	transform: translate(-42%, 0);
+	animation: blinke 7s linear infinite;
+	cursor:pointer;
+}
+
+#ppud {
+	font-size: 11pt;
+	transition: 1s;
+	text-align: center;
+	position: fixed;
+	left:50%;
+	transform: translate(-50%, 0);
+	top:63vh;
+	line-height: 37pt;
+}
+
+#ppud:hover {
+	transition:2s;
+	cursor:pointer;
+	animation: blinke 7s linear infinite;
+}

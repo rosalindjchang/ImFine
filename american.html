@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="am.css">
+		<meta charset="UTF-8">
+		<title>an american dream</title>
+		<script src="js/clmtrackr.js"></script>
+    	<script src="models/model_pca_20_svm.js"></script>
+		<script src="js/jquery.js">	</script>
+		<script src="js/scrollreveal.min.js"></script>
+		<script type="text/javascript">
+			
+			$(document).ready(function(){
+				
+				var menu = false;
+				var listen = false;
+				var Timer;
+				
+				
+				
+				
+				$(".menu-icon").click(function(){
+					$(".menu-icon").toggleClass("active");
+					$(".section").toggleClass("menuopen");
+					$("#menclick").toggleClass("msvg2 msvg1");
+					$(".sidebar").toggleClass("active");
+					if (menu == false) {
+						menu = true;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 90 0");
+						}, 700);
+					} else if (menu == true) {
+						menu = false;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 90");
+						}, 700);
+						
+					}
+				});
+				
+				$(".men").click(function(){
+					$(".col1").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+				});
+				
+				$("#anaudio")[0].volume = 0;
+				
+				if (listen == false) {
+					$("#switch").on('mouseenter', function(){
+						$(".aud").addClass("blink3").remove("blink2");
+					}).on('mouseleave',function(){
+						$(".aud").removeClass("blink3").add("blink2");
+					})
+				}
+				
+				$("#switch").click(function(){
+					if (listen == false){
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,-30 45,-30 45,0");
+						listen = true;
+						$(".aud").removeClass("blink2").addClass("opp");
+						$("#anaudio").get(0).play();
+						$("#anaudio").animate({volume: 1}, 1500);
+						$(".section-wrapper").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+					} else if (listen == true) {
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,0 45,0 45,0");
+						listen = false;
+						$(".aud").removeClass("opp").addClass("blink2");
+						$("#anaudio").get(0).pause();
+						$("#anaudio").animate({volume: 0}, 2000);
+						document.getElementById("anaudio").loop = true;
+						$(".section-wrapper").fadeIn().addClass("fadeIn").removeClass("fadeOut");
+					}
+				});
+				
+				
+				window.sr = ScrollReveal({reset:true});
+				sr.reveal('.section');
+				
+				
+				$("#assemblage").on('mouseenter', function(){
+					$(".amletters").addClass("aaa slide").removeClass("aa");
+					$(".upsidedown").removeClass("uaa").addClass("uaaa");
+				}).on('mouseleave',function(){
+					$(".amletters").removeClass("aaa slide").addClass("aa");
+					$(".upsidedown").removeClass("uaaa").addClass("uaa");
+				})
+				
+				$("#house").on('mouseenter', function(){
+					$(".M").removeClass("mm").addClass("mmm");
+					$(".A").removeClass("ma").addClass("maa");
+				}).on('mouseleave',function(){
+					$(".M").removeClass("mmm").addClass("mm");
+					$(".A").removeClass("maa").addClass("ma");
+				})
+				
+				$("#mattress").on('mouseenter', function(){
+					$(".I").removeClass("ii").addClass("iii");
+				}).on('mouseleave',function(){
+					$(".I").removeClass("iii").addClass("ii");
+				})
+				
+					var DD = false;
+					var DDD = false;
+					var d2;
+					var d3; 
+				
+				$(".buoy").on('mouseenter', function(){
+					$(".D").removeClass("dd").addClass("ddd swayy");
+					ddtrue();
+					dddtrue();
+				
+				}).on('mouseleave',function(){
+					
+					$(".D").removeClass("ddd swayy").addClass("dd");
+					if (DD == false) {
+						ddfalse();
+					} else if (DD == true) {
+						setTimeout(function(){
+							$(".D2").removeClass("ddd swayy").addClass("dd");
+							DD = false;
+						}, 100);
+					}
+					 
+					if (DDD == false) {
+						dddfalse();
+					} else if (DDD == true) {
+						setTimeout(function(){
+								$(".D3").removeClass("ddd swayy").addClass("dd");
+								DDD = false;
+						}, 200);	
+					}
+					
+				})
+				
+				function ddtrue() {
+					d2 = setTimeout(function(){
+						$(".D2").removeClass("dd").addClass("ddd swayy");
+						DD = true;
+						console.log('go');
+					}, 2200);
+				}
+				
+				function ddfalse() {
+					clearTimeout(d2);
+					console.log('dd');
+				}
+				
+				function dddtrue () {
+					d3 = setTimeout(function(){
+						$(".D3").removeClass("dd").addClass("ddd swayy");
+						DDD = true;
+					}, 4200);
+				}
+				
+				function dddfalse() {
+					clearTimeout(d3);
+					console.log('ddd');
+				}
+
+				$("#crunch").on('mouseenter', function(){
+					$(".C").removeClass("cc").addClass("ccc");
+					$(".C2").removeClass("cc").addClass("ccc");
+					$(".C3").removeClass("cc").addClass("ccc");
+				}).on('mouseleave',function(){
+					$(".C3").removeClass("ccc").addClass("cc");
+					$(".C2").removeClass("ccc").addClass("cc");
+					$(".C").removeClass("ccc").addClass("cc");
+				})
+				
+				$("#hoisted").on('mouseenter', function(){
+					$(".H").removeClass("hh").addClass("hhh stacking3");
+					$(".H2").removeClass("hh").addClass("hhh2 stacking2");
+					$(".H3").removeClass("hh").addClass("hhh3 stacking");
+				}).on('mouseleave',function(){
+					$(".H").addClass("hh").removeClass("hhh stacking3");
+					$(".H2").addClass("hh").removeClass("hhh2 stacking2");
+					$(".H3").addClass("hh").removeClass("hhh3 stacking");
+				})
+				
+				$("#tender").on('mouseenter', function(){
+					$(".E").removeClass("ee").addClass("eee");
+					$(".E2").removeClass("ee2").addClass("eee2");
+				}).on('mouseleave',function(){
+					$(".E").addClass("ee").removeClass("eee");
+					$(".E2").addClass("ee2").removeClass("eee2");
+				})
+				
+				$("#restless").on('mouseenter', function(){
+					$(".Rest").removeClass("re").addClass("ree");
+					$(".RR").removeClass("rr").addClass("rrr");
+					$(".EE").removeClass("er").addClass("err");
+					$(".AA").removeClass("ar").addClass("arr");
+					$(".MM").removeClass("mr").addClass("mrr");
+					$(".reest").addClass("swingi");
+				}).on('mouseleave',function(){
+					$(".Rest").addClass("re").removeClass("ree");
+					$(".RR").addClass("rr").removeClass("rrr");
+					$(".EE").addClass("er").removeClass("err");
+					$(".AA").addClass("ar").removeClass("arr");
+					$(".MM").addClass("mr").removeClass("mrr");
+					$(".reest").removeClass("swingi");
+				})
+				
+				$("#sub").on('mouseenter', function(){
+					$(".M3").removeClass("mm2").addClass("mmm2");
+					$(".A3").removeClass("ma2").addClass("maa2");
+					$(".M2").removeClass("mm3").addClass("mmm3");
+				}).on('mouseleave',function(){
+					$(".M3").removeClass("mmm2").addClass("mm2");
+					$(".M2").removeClass("mmm3").addClass("mm3");
+					$(".A3").removeClass("maa2").addClass("ma2");
+				})
+				
+				$("#pool").on('mouseenter', function(){
+					$(".P").removeClass("pp").addClass("ppp");
+					$(".P2").removeClass("pp").addClass("ppp");
+					$(".P3").removeClass("pp").addClass("ppp");
+				}).on('mouseleave',function(){
+					$(".P").removeClass("ppp").addClass("pp");	
+					$(".P2").removeClass("ppp").addClass("pp");	
+					$(".P3").removeClass("ppp").addClass("pp");
+				})
+				
+				$("#promise").on('mouseenter', function(){
+					$(".RM").removeClass("rm").addClass("rmm");
+					$(".RM2").removeClass("rm2").addClass("rmm2");
+					$(".RM3").removeClass("rm3").addClass("rmm3");
+					$(".MR").removeClass("mir").addClass("mirr");
+					$(".MR2").removeClass("mir2").addClass("mirr2");
+					$(".MR3").removeClass("mir3").addClass("mirr3");
+				}).on('mouseleave',function(){
+					$(".RM").removeClass("rmm").addClass("rm");
+					$(".RM2").removeClass("rmm2").addClass("rm2");
+					$(".RM3").removeClass("rmm3").addClass("rm3");
+					$(".MR").removeClass("mirr").addClass("mir");
+					$(".MR2").removeClass("mirr2").addClass("mir2");
+					$(".MR3").removeClass("mirr3").addClass("mir3");
+				})
+				
+				$("#cul").on('mouseenter', function(){
+					$(".Cu").removeClass("co").addClass("coo");
+				}).on('mouseleave',function(){
+					$(".Cu").removeClass("coo").addClass("co");
+				})
+				
+				$("#opera").on('mouseenter', function(){
+					$(".Op").removeClass("ao").addClass("aoo");
+					$(".Op2").removeClass("ao2").addClass("aoo2");
+				}).on('mouseleave',function(){
+					$(".Op").removeClass("aoo").addClass("ao");
+					$(".Op2").removeClass("aoo2").addClass("ao2");
+				})
+				
+				$("#strain").on('mouseenter', function(){
+					$(".AI").removeClass("ai").addClass("aii");
+					$(".IA").removeClass("ia").addClass("iaa");
+				}).on('mouseleave',function(){
+					$(".AI").removeClass("aii").addClass("ai");
+					$(".IA").removeClass("iaa").addClass("ia");
+				})
+				
+				$("#warm").on('mouseenter', function(){
+					$(".W").removeClass("ww").addClass("www");
+					$(".W2").removeClass("ww").addClass("www");
+				}).on('mouseleave',function(){
+					$(".W").removeClass("www").addClass("ww");
+					$(".W2").removeClass("www").addClass("ww");
+				})
+				
+				$("#pud").on('mouseenter', function(){
+					$(".Pu").removeClass("du").addClass("duu");
+					$(".Pu2").removeClass("du").addClass("duu");
+				}).on('mouseleave',function(){
+					$(".Pu").removeClass("duu").addClass("du");
+					$(".Pu2").removeClass("duu").addClass("du");
+				})
+				
+				$("#mems").on('mouseenter', function(){
+					$(".Me").removeClass("mee").addClass("meee");
+					$(".Me2").removeClass("mee").addClass("meee");
+				}).on('mouseleave',function(){
+					$(".Me").removeClass("meee").addClass("mee");
+					$(".Me2").removeClass("meee").addClass("mee");
+				})
+				
+				
+				
+			});
+		</script>
+
+	</head>
+	
+	<body>
+		
+		<div class="section-wrapper">
+			
+			
+
+    		<div class="section" data-hash="section-hash-name">
+				<div class="amtitle" id="an">AN</div><br>
+				<div class="amtitle" id="amer">AMERICAN</div><br>
+				<div class="amtitle blue">DREAM</div>
+			</div>
+			
+    		<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					My parents’ first bed in their first <span class="hov" id="house">American house</span><br>
+					was a <span class="hov" id="mattress">battered mattress</span> dumped on the street<br>
+					bare among crisp living-room curtains<br>
+					stitched from an <span  class="hov" id="assemblage">assemblage of sheets.</span><br>
+				</div>
+				<div class="amletters aa">
+					<div class="blue">A</div><div class="white">A</div><div class="red">A</div><div class="blue">A</div><div class="white">A</div><div class="red">A</div><div class="blue">A</div><div class="white">A</div><div class="red">A</div><div class="blue">A</div><div class="white">A</div><div class="red">A</div><div class="blue">A</div><div class="white">A</div><div class="red">A</div><div class="blue">A</div><div class="white">A</div><div class="red">A</div>
+				<div class="upsidedown uaa">
+					<div class="blue">A</div><div class="red">A</div><div class="white">A</div><div class="blue">A</div><div class="red">A</div><div class="white">A</div><div class="blue">A</div><div class="red">A</div><div class="white">A</div><div class="blue">A</div><div class="red">A</div><div class="white">A</div><div class="blue">A</div><div class="red">A</div><div class="white">A</div><div class="blue">A</div><div class="red">A</div><div class="white">A</div>
+				</div>
+ 				</div>
+				<div class="A ma">A</div>
+				<div class="M mm">M</div>
+				<div class="I ii">I</div>
+			</div>
+			
+			<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					At dinner they would stand by the pale kitchen counter<br>
+					munch pasty potato salad that <span class="hov" id="crunch">crunched</span><br>
+					with juicy apple bits in <span class="buoy hov"> buoyant<br>
+					bites</span> of fresh opportunity.<br>
+					<div class="C cc Canimate">C</div>
+					<div class="C2 cc Canimate2">C</div>
+					<div class="C3 cc Canimate3">C</div>
+					<div class="D dd">C</div>
+					<div class="D2 dd">C</div>
+					<div class="D3 dd">C</div>
+				</div>
+ 			</div>
+			
+			<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					By the time I was born they had a real bed, mattress<br>
+					<span class="hov" id="hoisted">hoisted high</span> beyond my squat fingertips<br>
+					which grasped for tough gripped hands <span class="hov" id="tender">tender-veined</span><br>
+					from study, scrubbing, <span class="hov" id="restless">restless</span> dreams.<br>
+				<div class="reest">
+					<div class="Rest re">D</div>
+					<div class="RR rr">R</div>
+					<div class="EE er">E</div>
+					<div class="AA ar">A</div>
+					<div class="MM mr">M</div>
+				</div>
+ 				</div>
+				</div>
+				
+				<div class="H hh">M</div>
+				<div class="H2 hh">M</div>
+				<div class="H3 hh">M</div>
+				
+				<div class="E ee">E</div>
+				<div class="E2 ee2">E</div>
+				
+			
+			<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					We moved to a two-story <span class="hov" id="sub">suburban dream</span>, roof green<br>
+					rimmed with <span class="hov" id="promise">promises</span> of plushy carpet<br>
+					caterpillars and a <span class="hov" id="pool">neon pool</span><br>
+					pastel chalk down the street to school.<br>
+				</div>
+				<div class="P pp Panimate">C</div>
+				<div class="P2 pp Panimate2">C</div>
+				<div class="P3 pp Panimate3">C</div>
+				<div class="A3 ma2">A</div>
+				<div class="M3 mm2">M</div>
+				<div class="M2 mm3">M</div>
+
+				<div class="RIM RM rm">R</div>
+				<div class="RIM RM2 rm2">R</div>
+				<div class="RIM RM3 rm3">R</div>
+				<div class="RIM MR mir">M</div>
+				<div class="RIM MR2 mir2">M</div>
+				<div class="RIM MR3 mir3">M</div>
+				
+ 			</div>
+			
+			<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					But I remember from my father’s closed office room<br>
+					a tinge of gray drowning in <span class="hov" id="opera">soft opera</span><br>
+					tears blurred the charming <span class="hov" id="cul">cul-de-sac</span><br>
+					in a somber, <span class="hov" id="strain" >strained hollowness.</span><br>
+				</div>
+				
+				<div class="Op ao drowning">A</div>
+				<div class="Op ao drowning1">A</div>
+				<div class="Op ao drowning2">A</div>
+				<div class="Op2 ao2 drowning2">A</div>
+				<div class="Op2 ao2 drowning3">A</div>
+				<div class="Op2 ao2 drowning4">A</div>
+				
+				<div class="Cu co animc">C</div>
+				<div class="Cu co animc2">C</div>
+				<div class="Cu co animc3">C</div>
+				<div class="Cu co animc4">C</div>
+				<div class="Cu co animc5">C</div>
+				<div class="Cu co animc6">C</div>
+				<div class="Cu co animc7">C</div>
+				<div class="Cu co animc8">C</div>
+				
+				<div class="AI ai">A</div>
+				<div class="IA ia">I</div>
+				
+ 			</div>
+			
+			<div class="section" data-hash="section-hash-name">
+				<div class="colam">
+					My parents sitting in <span class="hov" id="mems">memories</span> of their leaking<br>
+					volvo in the rain, wooden floors<br>
+					vacant besides <span class="hov" id="pud">puddles</span> and their torn<br>
+					but <span class="hov" id="warm">warm mattress</span> from slumberous nights.<br>
+				</div>
+				
+				<div class="Pu du raining">D</div>
+				<div class="Pu2 du raining2">D</div>
+				
+				<div class="W ww upw1">M</div>
+				<div class="W2 ww upw2">M</div>
+				
+				<div class="Me mee">M</div>
+				<div class="Me2 mee">M</div>
+				
+ 			</div>
+			
+	
+  			</div>
+		
+				<div class="sidebar">
+					<ul class="menu">
+						<li><a href ="index.html" class="men">+</a></li>
+						<li><a href ="american.html" class="men">An American Dream</a></li>
+						<li><a href ="toana.html" class="men">To Ana</a></li>
+						<li><a href ="imfine.html" class="men">I'm Fine</a></li>
+						<li><a href ="waves.html" class="men">Waves</a></li>
+					</ul>
+				</div>
+
+				<div class="menu-icon">
+					<svg height="60" width="100" id="menclick" class="msvg1">
+						<path id="mi" d="M 50 25 q 0 0 0 90" stroke="white" stroke-width="2" fill="none">				
+						</path>
+					</svg>
+				</div>
+
+				<svg height="60" width="100" class="aud blink2">
+					<path id="topcurve" d="M 50 50 c 0,0 45,0 45,0" stroke="white" stroke-width="2" fill="none">				
+					</path>
+					<path d="M 50 50 q 15 0 45 0" stroke="white" stroke-width="2" fill="none">				
+					</path>
+				</svg>
+
+				<div id="switch"></div>
+				<audio class="audio" id="anaudio" controls preload="none"> 
+				   <source src="audio/american_audio.mp3" type="audio/mpeg">
+				</audio>
+
+		
+			
+				<script src="js/lethargy.min.js"></script>
+				<script src="https://rawgit.com/Olical/EventEmitter/master/EventEmitter.min.js"></script>
+				<script src="js/smartscroll.min.js"></script>
+				<script>
+  					var options = {
+    					mode: "vp", // "vp", "set"
+    					autoHash: false,
+    					sectionScroll: true,
+						initialScroll: true,
+						keepHistory: false,
+						sectionWrapperSelector: ".section-wrapper",
+						sectionClass: "section",
+						animationSpeed: 300,
+						headerHash: "header",
+						breakpoint: null,
+						eventEmitter: null,
+						dynamicHeight: false
+  					};
+  					$.smartscroll(options);
+					
+				
+				</script>
+
+		
+	</body>
+	
+</html>

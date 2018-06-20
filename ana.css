@@ -1,0 +1,150 @@
+#anatitle {
+	text-align: right;
+	transition: 5s;
+	position: fixed;
+	right:5%;
+	top:5%;
+	height:100px;
+}
+
+.analine {
+	opacity: 0.04;
+	transition: 5s;
+	width:100px;
+	position: fixed;
+}
+
+.down {
+	margin-top:110px;
+	transition: 1s;
+}
+
+.anap1 {
+	transition: 1s;
+}
+
+.anap1:hover {
+	cursor:pointer;
+}
+
+#anap2 {
+	transition: 1s;
+}
+
+#anap2:hover {
+	cursor:pointer;
+}
+
+#anap3 {
+	transition: 1s;
+}
+
+#anap3:hover {
+	cursor:pointer;
+}
+
+#anap4 {
+	transition: 1s;
+}
+
+#anap4:hover {
+	cursor:pointer;
+}
+
+.hide {
+	display:none;
+	position: fixed;
+}
+
+.anapactive {
+	opacity: 1;
+}
+
+
+.bodylett {
+	font-size:5vw;
+	text-align: right;
+	line-height: 1;
+	position:fixed;
+	font-style: italic;
+	opacity: 0;
+	font-weight:300;
+	transition:3s;
+}
+
+#b {
+	right: 40%;
+	top:10%;
+}
+
+#o {
+	right:31%;
+	top:30%;
+}
+
+#d {
+	right:18%;
+	top:23%;
+}
+
+#y {
+	right:8%;
+	top:45%;
+}
+
+.bloated {
+	font-weight:500;
+	font-size:20vw;
+	opacity: 0.02;
+}
+
+.bloated:hover {
+	transform: scaleX(1.5) skewX(10deg);
+	opacity:0.8;
+	transition: 0.8s;
+}
+
+.bloated2 {
+	font-weight:100;
+	font-size:12vw;
+	opacity: 0.03;
+	transition: 5s;
+}
+
+.bloated2:hover {
+	transform: scale(0.5,1.3) skewX(10deg);
+	transition: 0.8s;
+	opacity: 0.8;
+}
+
+.bloated3 {
+	font-weight:200;
+	font-size:9vw;
+	opacity: 0.03;
+	margin-top:40px;
+}
+
+.bloated3:hover{
+	font-size: 8vw;
+	transform: scale(2) translate(-30px,20px);
+	opacity: 0.8;
+	transition:0.2s;
+}
+
+.bloated4 {
+	margin-top:100px;
+	font-size:10pt;
+	font-weight:200;
+	font-size:6vw;
+	opacity: 0.03;
+}
+
+.bloated4:hover {
+	margin-top:100px;
+	font-size:10pt;
+	font-weight:200;
+	font-size:6vw;
+	opacity: 0;
+	transition: 0.3s;
+	transform: translate(30px,0);
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="wav.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+		<meta charset="UTF-8">
+		<title>waves</title>
+    	<script src="models/model_pca_20_svm.js"></script>
+		<script src="js/jquery.js">	</script>
+		<script>
+			
+			$(document).ready(function(){
+				
+				var listen = false;
+				var anaudio = document.getElementById("anaudio");
+				var menu = false;
+				
+				$(".menu-icon").click(function(){
+					$(".menu-icon").toggleClass("active");
+					$(".move").toggleClass("menuopen");
+					$("#menclick").toggleClass("msvg2 msvg1");
+					$(".sidebar").toggleClass("active");
+					if (menu == false) {
+						menu = true;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 90 0");
+						}, 700);
+					} else if (menu == true) {
+						menu = false;
+						document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 0");
+						setTimeout(function(){
+							document.getElementById("mi").setAttribute("d", "M 50 25 q 0 0 0 90");
+						}, 700);
+						
+					}
+				});
+				
+				$(".men").click(function(){
+					$(".row").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+				});
+				
+				$("#anaudio")[0].volume = 0;
+				
+				if (listen == false) {
+					$("#switch").on('mouseenter', function(){
+						$(".aud").addClass("blink3").remove("blink2");
+					}).on('mouseleave',function(){
+						$(".aud").removeClass("blink3").add("blink2");
+					})
+				}
+				
+				$("#switch").click(function(){
+					if (listen == false){
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,-30 45,-30 45,0");
+						listen = true;
+						$(".aud").removeClass("blink2").addClass("opp");
+						$("#anaudio").get(0).play();
+						$("#anaudio").animate({volume: 1}, 1500);
+						$(".row").fadeOut().addClass("fadeOut").removeClass("fadeIn");
+					} else if (listen == true) {
+						document.getElementById("topcurve").setAttribute("d", "M 50 50 c 0,0 45,0 45,0");
+						listen = false;
+						$(".aud").removeClass("opp").addClass("blink2");
+						$("#anaudio").get(0).pause();
+						$("#anaudio").animate({volume: 0}, 2000);
+						document.getElementById("anaudio").loop = true;
+						$(".row").fadeIn().addClass("fadeIn").removeClass("fadeOut");
+					}
+				});	
+				
+ 								
+						$("#salt").click(function(){
+							$("#salt").removeClass("blink3").addClass("no");
+							$("#far").addClass("blink3").removeClass("no");
+							$(".wt").addClass("salty");
+							$(".w").addClass("ws");
+							$(".a").addClass("as");
+							$(".v").addClass("vs");
+							$(".e").addClass("es");
+							$(".s").addClass("ss");					
+						});
+						$("#far").click(function(){
+							$("#far").removeClass("blink3").addClass("no");
+							$("#weight").addClass("blink3").removeClass("no");
+							$(".w").addClass("wf");
+							$(".a").addClass("af");
+							$(".v").addClass("vf");
+							$(".e").addClass("ef");
+							$(".s").addClass("sf");
+						});
+						$("#weight").click(function(){
+							$("#weight").removeClass("blink3").addClass("no");
+							$("#drown").addClass("blink3").removeClass("no");
+							$(".wt").removeClass("salty").addClass("heavy");
+							$(".w").addClass("ww").removeClass("ws wf");
+							$(".a").addClass("aw").removeClass("as af");
+							$(".v").addClass("vw").removeClass("vs vf");
+							$(".e").addClass("ew").removeClass("es ef");
+							$(".s").addClass("sw").removeClass("ss sf");
+						});
+				
+						$("#drown").click(function(){
+							$("#drown").removeClass("blink3").addClass("no");
+							$("#tens").addClass("blink3").removeClass("no");
+							$(".w").addClass("wd").removeClass("ww");
+							$(".a").addClass("ad").removeClass("aw");
+							$(".v").addClass("vd").removeClass("vw");
+							$(".e").addClass("ed").removeClass("ew");
+							$(".s").addClass("sd").removeClass("sw");
+						});	
+				
+						$("#tens").click(function(){
+							$("#tens").removeClass("blink3").addClass("no");
+							$("#corn").addClass("blink3").removeClass("no");
+							$(".w").addClass("we").removeClass("wd");
+							$(".a").addClass("ae").removeClass("ad");
+							$(".v").addClass("ve").removeClass("vd");
+							$(".e").addClass("ee").removeClass("ed");
+							$(".s").addClass("se").removeClass("sd");
+						});	
+				
+						$("#corn").click(function(){
+							$("#corn").removeClass("blink3").addClass("no");
+							$(".wt").removeClass("heavy");
+							$("#ach").addClass("blink3").removeClass("no");
+							$(".w").addClass("wn").removeClass("we");
+							$(".a").addClass("an").removeClass("ae");
+							$(".v").addClass("vn").removeClass("ve");
+							$(".e").addClass("en").removeClass("ee");
+							$(".s").addClass("sn").removeClass("se");
+						});	
+						$("#ach").click(function(){
+							$("#ach").removeClass("blink3").addClass("no");
+							$("#shy").addClass("blink3").removeClass("no");
+							$(".w").addClass("wac").removeClass("wn");
+							$(".a").addClass("aac").removeClass("an");
+							$(".v").addClass("vac").removeClass("vn");
+							$(".e").addClass("eac").removeClass("en");
+							$(".s").addClass("sac").removeClass("sn");
+							$(".wt").addClass("aching");
+						});		
+						$("#shy").click(function(){
+							$("#shy").removeClass("blink3").addClass("no");
+							$("#dim").addClass("blink3").removeClass("no");
+							$(".wt").removeClass("aching").addClass("shyy");
+							$(".w").addClass("wy").removeClass("wac");
+							$(".a").addClass("ay").removeClass("aac");
+							$(".v").addClass("vy").removeClass("vac");
+							$(".e").addClass("ey").removeClass("eac");
+							$(".s").addClass("sy").removeClass("sac");
+							
+						$("#dim").click(function(){
+							$("#dim").removeClass("blink3").addClass("no");
+							$("#sim").addClass("blink3").removeClass("no");
+							$(".w").addClass("wdr").removeClass("wy");
+							$(".a").addClass("adr").removeClass("ay");
+							$(".v").addClass("vdr").removeClass("vy");
+							$(".e").addClass("edr").removeClass("ey");
+							$(".s").addClass("sdr").removeClass("sy");
+						});	
+						$("#sim").click(function(){
+							$("#sim").removeClass("blink3").addClass("no");
+							$("#rise").addClass("blink3").removeClass("no");
+							$(".wt").addClass("simmer");
+						});	
+						$("#rise").click(function(){
+							$("#rise").removeClass("blink3").addClass("no");
+							$(".w").removeClass("wdr");
+							$(".a").removeClass("adr");
+							$(".v").removeClass("vdr");
+							$(".e").removeClass("edr");
+							$(".s").removeClass("sdr");
+							$(".wt").removeClass("shyy simmer");
+							$("#salt").addClass("blink3").removeClass("no");																
+						});	
+						
+					});				
+			});
+			
+		</script>	
+	</head>
+	
+	<body>
+		<div class="row animated fadeIn">
+			<div class="colw move">
+				
+				<div><span class="wt w">w</span><span class="wt a">a</span><span class="wt v">v</span><span class="wt e">e</span><span class="wt s">s</span></div>
+			</div>
+			
+			<div class="col2 move">
+				<span class="blink3" id="salt">I tasted salt in my mouth</span><br>
+				<span class="no" id="far">but I was far from the sea</span><br>
+				<span class="no" id="weight">felt a weight on my chest</span><br>
+				<span class="no" id="drown">but I wasn’t drowning</span><br>
+				<span class="no" id="tens">and there was tension</span><br>
+				<span class="no" id="corn">in the corner of my eyes</span><br>
+				<span class="no" id="ach">aching corners but</span><br>
+				<span class="no" id="shy">the waves were shy</span><br>
+				<span class="no" id="dim">collapsing back into the dim</span><br>
+				<span class="no" id="sim">simmering</span><br>
+				<span class="no" id="rise">to rise up again.</span>
+			</div>
+		</div>
+
+		<div class="sidebar">
+			<ul class="menu">
+				<li><a href ="index.html" class="men">+</a></li>
+				<li><a href ="american.html" class="men">An American Dream</a></li>
+				<li><a href ="toana.html" class="men">To Ana</a></li>
+				<li><a href ="imfine.html" class="men">I'm Fine</a></li>
+				<li><a href ="waves.html" class="men">Waves</a></li>
+
+			</ul>
+		</div>
+		
+		<div class="menu-icon">
+			<svg height="60" width="100" id="menclick" class="msvg1">
+				<path id="mi" d="M 50 25 q 0 0 0 90" stroke="white" stroke-width="2" fill="none">				
+				</path>
+			</svg>
+		</div>
+		
+		<svg height="60" width="100" class="aud blink2">
+			<path id="topcurve" d="M 50 50 c 0,0 45,0 45,0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+			<path d="M 50 50 q 15 0 45 0" stroke="white" stroke-width="2" fill="none">				
+			</path>
+		</svg>
+		
+		<div id="switch"></div>
+		<audio class="audio" id="anaudio" controls preload="none"> 
+		   <source src="audio/waves_audio.mp3" type="audio/mpeg">
+		</audio>
+
+	</body>
+	
+</html>
