@@ -7,22 +7,11 @@
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
-@font-face {
-	font-family: 'RobotoMono';
-	src: url(/font/RobotoMono-Light.ttf) format('truetype');
-	font-weight: 100;
-}
-
-@font-face {
-	font-family: 'RobotoMono';
-	src: url(/font/RobotoMono-regular.ttf) format('truetype');
-	font-weight: 300;
-}
 
 body {
 	margin:0;
 	padding:0;
-	font-family:RobotoMono;
+	font-family:Roboto Mono;
 	font-weight: 100;
 	line-height: 30px;
 	font-size: 8pt;
@@ -76,7 +65,7 @@ body {
 
 .sidebar .menu li {
 	list-style:none;
-	font-family: RobotoMono;
+	font-family: Roboto Mono;
 	font-size: 10pt;
 	line-height: 30px;
 	letter-spacing: 4pt;
@@ -105,7 +94,7 @@ body {
 h1{
 	font-size:14pt;
 	color: white;
-	font-family: RobotoMono;
+	font-family: Roboto Mono;
 	font-weight: 300;
 	margin: 100;
 	
