@@ -11,6 +11,44 @@
 		<script type="text/javascript">
 			
 			$(document).ready(function(){
+				//// idle??
+	
+				idleTime_inactive = 0;
+				var idleInterval = setInterval(timerIncrements, 1000);
+				var idleTime_inactivetemp = false;
+				function timerIncrements()
+				{
+					console.log(idleTime_inactive);
+					if(idleTime_inactivetemp == false) {
+						idleTime_inactive++;
+						if (idleTime_inactive >= 30){
+							window.location = 'https://rosalindjchang.github.io/zine-index/';
+						}
+					}
+				}
+				function get_pagescroll_per(){
+					var wintop = $(window).scrollTop(), docheight = $(document).height(), winheight = $(window).height();
+					var  scrolltrigger = 0.95;
+					return (wintop/(docheight-winheight))*100;
+				}
+
+				$(document).bind('mouseover click keydown scroll', function () {
+					idleTime_inactive = 0;
+				});
+
+				document.addEventListener("visibilitychange", function() {
+				  if(document.hidden == true) {
+					idleTime_inactivetemp = true;
+				  } else {
+					idleTime_inactivetemp = false;
+				  }
+				}, false);
+
+				//back to index
+
+				$(".zineindex").click(function(){
+					window.location = 'https://rosalindjchang.github.io/zine-index/';
+				});
 				
 				var listen = false;
 				$("#anaudio")[0].volume = 0;
@@ -46,7 +84,11 @@
 		</script>		
 	</head>
 	
+	
+	
 	<body>
+		
+		<div class="zineindex"></div>
 				
 		<div class="ptitles animated fadeIn">
 			<li><a href ="american.html" id="pamerican" class="blinka">An American Dream</a></li>
